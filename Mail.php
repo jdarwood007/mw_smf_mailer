@@ -69,7 +69,7 @@ class Mail_SMF
 
 		// Now change our headers.
 		$headers = 'From: ' . $wiki_name. ' <' . $wgPasswordSender . '>' . $line_break;
-		$headers .= 'Return-Path: ' . (!empty($wgSMFReturnPath) ? $wgSMFReturnPath : $$wgPasswordSender) . $line_break;
+		$headers .= 'Return-Path: ' . (!empty($wgSMFReturnPath) ? $wgSMFReturnPath : $wgPasswordSender) . $line_break;
 		$headers .= 'Date: ' . self::$headers['Date'] . $line_break;
 		$headers .= 'X-Mailer: MediaWiki Mailer - SMF' . $line_break;
 		$headers .= 'Message-ID: ' . self::$headers['Message-ID']. $line_break;
